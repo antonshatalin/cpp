@@ -98,7 +98,7 @@ void polinom2_roots(double D)
 int main()
 {
     double a, b , c;
-    cout << "input your coefficients" << endl;
+    cout << "input your coefficients:" << endl;
     cin >> a >> b >> c;
     polinom2_roots(
 		    discriminant(a, b, c)
