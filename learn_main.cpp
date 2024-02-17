@@ -86,15 +86,22 @@ void max()
 
 double discriminant(double a, double b, double c)
 {
-    double D = b * 2 - 4 * a * c;
+    double D = b * b - 4 * a * c;
     return D;
 }
 
-void polinom2_root()
+void polinom2_roots(double D)
 {
+    cout << "D = "<< D << endl;
 }
 
 int main()
 {
+    double a, b , c;
+    cout << "input your coefficients" << endl;
+    cin >> a >> b >> c;
+    polinom2_roots(
+		    discriminant(a, b, c)
+    );
     return 0;
 }
