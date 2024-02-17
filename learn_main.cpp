@@ -84,20 +84,36 @@ void max()
         cout << a3 << " is maximum" << endl;
 }
 
-double discriminant(double a, double b, double c)
+double discriminant(float a, float b, float c)
 {
-    double D = b * b - 4 * a * c;
+    float D = pow(b,2) - 4 * a * c;
     return D;
 }
 
-void polinom2_roots(double D)
+int polinom2_roots(float D)
+{   
+    cout << "D = " << D << endl;
+    if (D < 0) {
+   	cout << "complex roots" <<endl;
+	return 0;
+    }
+    if (D == 0){
+    
+   	cout << "twins real roots" <<endl; 
+	return 0;
+    }
+    cout << "real roots" << endl;
+    return 0;
+}
+
+void dot_generator(int count)
 {
-    cout << "D = "<< D << endl;
+    for (int i = 0; i <=127; ++i) cout << i << " "   << char(i) << endl;
 }
 
 int main()
-{
-    double a, b , c;
+{  
+    float a, b , c;
     cout << "input your coefficients:" << endl;
     cin >> a >> b >> c;
     polinom2_roots(
